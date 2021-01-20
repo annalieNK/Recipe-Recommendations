@@ -26,7 +26,7 @@ st.write("In this example the relations between recipes are explored. However, t
 st.write("Ok, let's continue with an example. For example, try recipe 41995 in the Mexican kitchen.")
 
 # Load the data
-df = pd.read_json('/Users/annalie/Dev/poetry-demo-2/data/train.json')
+df = pd.read_json('/Users/annalie/Dev/recipe-recommendations/data/train.json')
 df = df.head(1000)
 
 #### Choose your recipe of reference
