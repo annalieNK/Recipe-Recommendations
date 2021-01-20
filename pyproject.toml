@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetry-demo-2"
+name = "recipe-recommendations"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
