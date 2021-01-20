@@ -65,6 +65,7 @@ network of people and their behaviors, or a network of connected roads.
 Authors and acknowledgment
 --------------------------
 
-Annalie Kruseman Dataset downloaded from Kaggles ‘What’s Cooking’.
+Annalie Kruseman 
+Dataset downloaded from Kaggles ‘What’s Cooking’.
 
 .. |Recipe Recommendation Network example| image:: https://github.com/annalieNK/Recipe-Recommendations/blob/main/example.png?raw=true
