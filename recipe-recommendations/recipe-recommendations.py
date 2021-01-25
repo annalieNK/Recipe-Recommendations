@@ -69,7 +69,7 @@ if recipe is not None:
     vectorizer = CountVectorizer(lowercase=True, min_df=1, analyzer='word', stop_words=None)
 
     #### one dtm with matching unique words
-    onewordingredients = [[one_word_ingredients(i) for i in inner] for inner in list(df['ingredients'])]
+    onewordingredients = [["".join(i.split()) for i in inner] for inner in list(df['ingredients'])]
     original_ingredient_corpus = [" ".join(i) for i in onewordingredients]
     dtm_orignal_ingredient = vectorizer.fit_transform(original_ingredient_corpus)
 
