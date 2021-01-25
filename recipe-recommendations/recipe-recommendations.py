@@ -70,12 +70,12 @@ if recipe is not None:
 
     #### one dtm with matching unique words
     onewordingredients = [[one_word_ingredients(i) for i in inner] for inner in list(df['ingredients'])]
-    original_ingredient_corpus = [convert_tokens_to_string(i) for i in onewordingredients]
+    original_ingredient_corpus = [" ".join(i) for i in onewordingredients]
     dtm_orignal_ingredient = vectorizer.fit_transform(original_ingredient_corpus)
 
 
     #### And another dtm where each word is its own token
-    separate_words_corpus = [multiple_words_ingredients(i) for i in list(df['ingredients'])]
+    separate_words_corpus = [" ".join(i) for i in list(df['ingredients'])]
     dtm_separate_words = vectorizer.fit_transform(separate_words_corpus)
 
     # concatenate matrices
