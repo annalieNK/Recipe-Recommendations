@@ -43,9 +43,9 @@ all prerequisites see the dependencies in the file pyproject.toml.
 Installation
 ~~~~~~~~~~~~
 
-To run the application clone this repository. 
+The data for this application is stored in a personal AWS S3 bucket and retreived with the data version control package DVC. If you would like to replicate this application clone this repository and download the raw dataset, see link at the bottom of this page. . 
 
-Download the data with DVC using the following line of code in the same directory in your terminal:
+When downloading the data with DVC it is assumed that the data is stored elsewhere and that DVC is connected. Next, use the following line of code in the same directory in your terminal to fetch the data:
 
 ::
 
@@ -56,7 +56,7 @@ To run the streamlit application and view the recommendation system run:
 
 ::
 
-   streamlit run recipes-recommendatons.py
+   streamlit run recipes_recommendatons.py
 
 Usage
 -----
@@ -74,6 +74,10 @@ Authors and acknowledgment
 --------------------------
 
 Annalie Kruseman 
-Dataset downloaded from Kaggles ‘What’s Cooking’.
+Feel free to contact me for any questions on annaliakruseman@gmail.com 
+
+Dataset downloaded from Kaggles `‘What’s Cooking’`_. 
 
 .. |Recipe Recommendation Network example| image:: https://github.com/annalieNK/Recipe-Recommendations/blob/main/example.png?raw=true
+
+.. _‘What’s Cooking’: https://www.kaggle.com/c/whats-cooking/data
