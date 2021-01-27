@@ -13,6 +13,7 @@ networkx = "^2.5"
 streamlit = "^0.74.1"
 matplotlib = "^3.3.3"
 boto3 = "^1.16.60"
+dvc = "^1.11.13"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"

@@ -43,12 +43,20 @@ all prerequisites see the dependencies in the file pyproject.toml.
 Installation
 ~~~~~~~~~~~~
 
-To run the application clone this repository and run the following code
-in the same directory in your terminal.
+To run the application clone this repository. 
+
+Download the data with DVC using the following line of code in the same directory in your terminal:
 
 ::
 
-   streamlit run comparing-recipes-streamlit.py
+    dvc pull
+
+
+To run the streamlit application and view the recommendation system run:
+
+::
+
+   streamlit run recipes-recommendatons.py
 
 Usage
 -----
