@@ -73,7 +73,8 @@ network of people and their behaviors, or a network of connected roads.
 Authors and acknowledgment
 --------------------------
 
-Annalie Kruseman 
+Annalie Kruseman
+ 
 Feel free to contact me for any questions on annaliakruseman@gmail.com 
 
 Dataset downloaded from Kaggles `‘What’s Cooking’`_. 

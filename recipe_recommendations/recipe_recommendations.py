@@ -40,6 +40,7 @@ recipe = st.selectbox(label='Select a recipe', options= sorted(category_subset['
 # get index by recipe ID
 RECIPE_INDEX = df[df['id']==recipe].index.values[0]
 
+THRESHOLD = st.slider('Choose a similarity threshold', 0., 1., .5, .01)
 
 #### Preprocess the data and compute similarities between recipes
 if recipe is not None:
@@ -64,7 +65,7 @@ if recipe is not None:
     similarity_csr = cosine_similarity(dtm, dense_output=False)
 
     # get similar recipes by index
-    sim_recipes = np.argwhere(similarity_csr > .5)
+    sim_recipes = np.argwhere(similarity_csr > THRESHOLD)
     sim_recipes = sim_recipes[sim_recipes[:, 0] != sim_recipes[:, 1]]
 
 
@@ -120,8 +121,8 @@ if model_run:
     col_idx = np.array(all_recommendations)
     recommendation_csr = similarity_csr[row_idx[:, None], col_idx]
 
-    # for the connected nodes keep only those pairs that have a similarity > .5
-    direct_recommendation_csr = (recommendation_csr > .5) 
+    # for the connected nodes keep only those pairs that have a similarity > THRESHOLD
+    direct_recommendation_csr = (recommendation_csr > THRESHOLD) 
 
     # convert adjacency matrix to graph
     G = nx.from_numpy_matrix(direct_recommendation_csr)
