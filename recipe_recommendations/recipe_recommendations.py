@@ -157,7 +157,7 @@ if model_run:
     node_colors_by_position = [d[i] for i in sorted(d)]
     node_text_by_position = list(df.loc[all_recommendations]['id'].values)#list(pos.keys())
 
-    fig = plot_network_graph(G, TITLE="Recommended recipes by distance", list_of_colors_by_order_of_nodes=node_colors_by_position, list_of_text_by_order_of_nodes=node_text_by_position)
+    fig = plot_network_graph(G, TITLE="Recommended recipes by distance with threshold of {}".format(THRESHOLD), list_of_colors_by_order_of_nodes=node_colors_by_position, list_of_text_by_order_of_nodes=node_text_by_position)
     st.plotly_chart(fig, use_container_width=True, sharing='streamlit')
     
 
