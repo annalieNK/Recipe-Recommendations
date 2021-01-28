@@ -64,7 +64,7 @@ To replicate this code run:
 
 ::
 
-python raw_code.py .5 41995
+   python raw_code.py .5 41995
 
 
 Usage
