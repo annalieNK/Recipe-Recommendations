@@ -134,10 +134,9 @@ def parse_arguments(argv):
 
 
 if __name__ == '__main__':
-    # start_time = timeit.default_timer()
     recommend_recipes(parse_arguments(sys.argv[1:]))  
-    # print(timeit.default_timer() - start_time) 
-
 
 #### Parameters
+# 1. threshold
+# 2. recipe
 # Run it like this: python raw_code.py .5 41995

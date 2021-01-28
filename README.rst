@@ -58,6 +58,15 @@ To run the streamlit application and view the recommendation system run:
 
    streamlit run recipes_recommendatons.py
 
+Alternative to running the streamlit application you may run the raw python code that outputs the recommendation for a particular recipe as an interactive network graph in your browser.
+Choose a threshold for the similarity metric as the first argument and the recipe as the second argument.
+To replicate this code run:
+
+::
+
+python raw_code.py .5 41995
+
+
 Usage
 -----
 
