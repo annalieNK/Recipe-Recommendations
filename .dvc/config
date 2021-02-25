@@ -2,3 +2,5 @@
     remote = storage
 ['remote "storage"']
     url = s3://recipe-recommendations/dvc-storage
+['remote "origin"']
+    url = https://dagshub.com/Annalie/recipe-recommendations.dvc

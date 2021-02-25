@@ -53,7 +53,6 @@ if recipe is not None:
     original_ingredient_corpus = [" ".join(i) for i in onewordingredients]
     dtm_orignal_ingredient = vectorizer.fit_transform(original_ingredient_corpus)
 
-
     #### And another dtm where each word is its own token
     separate_words_corpus = [" ".join(i) for i in list(df['ingredients'])]
     dtm_separate_words = vectorizer.fit_transform(separate_words_corpus)

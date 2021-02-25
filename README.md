@@ -1,8 +1,7 @@
-Recipe Recommendations
-======================
+# Recipe Recommendations
 
-Description
------------
+## Description
+
 
 Often recipe websites contain a filter to look for recipes. Sometimes
 when you look for a recipe you don’t necessarily know what filter you
@@ -30,64 +29,52 @@ The result of this recommendation system is presented with the Streamlit
 application and contains an interactive network made with Plotly and
 Networkx.
 
-Getting Started
----------------
+## Getting Started
 
-Prerequisites
-~~~~~~~~~~~~~
+### Prerequisites
 
 Make sure Streamlit is installed and a python version between 3.6 and
 3.8 is running. The python version of this application python 3.8.6. For
 all prerequisites see the dependencies in the file pyproject.toml.
 
-Installation
-~~~~~~~~~~~~
+### Installation
 
 The data for this application is stored in a personal AWS S3 bucket and retreived with the data version control package DVC. If you would like to replicate this application clone this repository and download the raw dataset, see link at the bottom of this page. . 
 
 When downloading the data with DVC it is assumed that the data is stored elsewhere and that DVC is connected. Next, use the following line of code in the same directory in your terminal to fetch the data:
 
-::
-
-    dvc pull
-
+```
+dvc pull
+```
 
 To run the streamlit application and view the recommendation system run:
 
-::
-
-   streamlit run recipes_recommendatons.py
+```
+streamlit run recipes_recommendatons.py
+```
 
 Alternative to running the streamlit application you may run the raw python code that outputs the recommendation for a particular recipe as an interactive network graph in your browser.
 Choose a threshold for the similarity metric as the first argument and the recipe as the second argument.
 To replicate this code run:
 
-::
+```
+python raw_code.py .5 41995
+```
 
-   python raw_code.py .5 41995
-
-
-Usage
------
+## Usage
 
 The recommendation system created here is an example of exploring
 relations between between entities. The data used here consists of text,
 but the concept can be used for many other applications. Think of a
 network of people and their behaviors, or a network of connected roads.
 
-| The below figure shows an example of the output through the Streamlit
-  application.
-| |Recipe Recommendation Network example|
+The below figure shows an example of the output through the Streamlit application.
+![Recipe Recommendation Network example](https://github.com/annalieNK/Recipe-Recommendations/blob/main/example.png?raw=true)
 
-Authors and acknowledgment
---------------------------
+## Authors and acknowledgment
 
 Annalie Kruseman
  
 Feel free to contact me for any questions on annaliakruseman@gmail.com 
 
-Dataset downloaded from Kaggles `‘What’s Cooking’`_. 
-
-.. |Recipe Recommendation Network example| image:: https://github.com/annalieNK/Recipe-Recommendations/blob/main/example.png?raw=true
-
-.. _‘What’s Cooking’: https://www.kaggle.com/c/whats-cooking/data
+Dataset downloaded from Kaggles [‘What’s Cooking’](https://www.kaggle.com/c/whats-cooking/data) 
